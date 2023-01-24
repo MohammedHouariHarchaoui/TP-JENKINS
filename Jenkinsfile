@@ -10,11 +10,20 @@ pipeline {
         always{
           archiveArtifacts  'build/reports/tests/**/*'
           cucumber buildStatus: 'UNSTABLE',
-          reportTitle: 'Cucumber report',
-          fileIncludePattern: 'target/report.json',
-          trendsLimit: 10,
+                reportTitle: 'Cucumber report',
+                fileIncludePattern: 'target/report.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'Browser',
+                        'value': 'Brave'
+                    ]
+                ]
+         
         }
       }
     }
+
+    
   }
 }
