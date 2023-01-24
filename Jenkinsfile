@@ -16,7 +16,7 @@ pipeline {
                 classifications: [
                         [
                             'key': 'Browser',
-                            'value': 'Brave',
+                            'value': 'Brave'
                         ]
                     ]
         }
