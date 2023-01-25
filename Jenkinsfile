@@ -24,6 +24,16 @@ pipeline {
       }
     }
     
+    stage('Code Analysis')
+    {
+      steps{
+      withSonarQubeEnv('Sonarqube') 
+          { 
+            bat './gradlew sonar'
+          }
+        }
+    }
+    
   
     
   }
