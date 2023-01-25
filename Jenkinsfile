@@ -5,7 +5,7 @@ pipeline {
     {
       steps{
         bat './gradlew test'
-        error("failing the pipeline")
+        //error("failing the pipeline")
       }
       post {
         always{
@@ -80,7 +80,7 @@ pipeline {
     }
     failure
     {
-       mail body: 'SUCCESS FAILED', subject: 'Build failed', to: 'jm_harchaoui@esi.dz'
+       mail body: 'BUILD FAILED', subject: 'Build failed', to: 'jm_harchaoui@esi.dz'
     }
   }
   
