@@ -103,7 +103,7 @@ public class Matrix {
 	
 	@Override
 	public int hashCode(){
-		return 1;
+		return nrows*ncols;
 	}
 
 }
