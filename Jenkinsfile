@@ -75,6 +75,11 @@ pipeline {
     success
     {
         notifyEvents message: 'BUILD SUCCESS', token: 'fLOrsgSMQXGmWzUzD4Gblw643QvvGc_e'
+       mail body: 'BUILD SUCCESS', subject: 'Build failed', to: 'jm_harchaoui@esi.dz'
+    }
+    failure
+    {
+       mail body: 'SUCCESS FAILED', subject: 'Build failed', to: 'jm_harchaoui@esi.dz'
     }
   }
   
